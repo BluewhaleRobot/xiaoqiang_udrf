@@ -12,6 +12,8 @@
 ```
 cd ~/Documents/ros/src
 git clone https://github.com/BlueWhaleRobot/xiaoqiang_udrf.git 
+cd ..
+catkin_make
 ```
 ###Quickstart    
 ```
@@ -26,6 +28,8 @@ roslaunch xiaoqiang_udrf xiaoqiang_udrf.launch
 ```
 cd ~/Documents/ros/src
 git clone https://github.com/BlueWhaleRobot/xiaoqiang_udrf.git 
+cd ..
+catkin_make
 ```
 ###直接启动
 ```
