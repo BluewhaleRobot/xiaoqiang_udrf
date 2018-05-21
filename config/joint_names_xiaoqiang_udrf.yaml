@@ -1,0 +1,1 @@
+controller_joint_names: ['right_wheel', 'left_whell', 'left_rot', 'right_rot', 'lidar', 'kinect', ]
