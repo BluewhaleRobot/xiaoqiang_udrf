@@ -306,7 +306,7 @@
       xyz="0 -1 0" />
   </joint>
   <link
-    name="kinect_link">
+    name="kinect_Link">
     <inertial>
       <origin
         xyz="-5.87573113058461E-05 5.53730394869945E-11 0.00406829312764971"
@@ -354,7 +354,7 @@
     <parent
       link="base_link" />
     <child
-      link="kinect_link" />
+      link="kinect_Link" />
     <axis
       xyz="1 0 0" />
   </joint>
