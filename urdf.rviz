@@ -29,13 +29,15 @@ Panels:
     Name: Time
     SyncMode: 0
     SyncSource: ""
+Toolbars:
+  toolButtonStyle: 2
 Visualization Manager:
   Class: ""
   Displays:
     - Alpha: 0.5
       Cell Size: 1
       Class: rviz/Grid
-      Color: 170; 0; 0
+      Color: 85; 85; 0
       Enabled: true
       Line Style:
         Line Width: 0.0299999993
@@ -45,7 +47,7 @@ Visualization Manager:
       Offset:
         X: 0
         Y: 0
-        Z: 0
+        Z: -0.119999997
       Plane: XY
       Plane Cell Count: 10
       Reference Frame: base_link
@@ -60,32 +62,37 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        back_wheel1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        back_wheel2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        base_Link2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        front1_wheel:
+        front_wheel1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        front2_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        kinect_link:
+        front_wheel2:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
         left_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        lidar_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -126,25 +133,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.23835135
+      Distance: 1.50534892
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.60895282
-        Y: -0.548560262
-        Z: -0.229264542
+        X: 0.110231787
+        Y: -0.00293093547
+        Z: 0.0400635786
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 1.51479638
+      Pitch: 0.149796635
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.13847947
+      Yaw: 2.07349133
     Saved: ~
 Window Geometry:
   Displays:

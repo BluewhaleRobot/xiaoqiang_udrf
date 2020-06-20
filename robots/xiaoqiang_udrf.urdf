@@ -4,17 +4,17 @@
     name="base_link">
     <inertial>
       <origin
-        xyz="0.0739287757231092 -0.000231615659211233 0.0521199201220533"
+        xyz="0.00571229418184364 -0.000102754891326107 0.0811148502019683"
         rpy="0 0 0" />
       <mass
-        value="8.36303567682231" />
+        value="5.51934540138491" />
       <inertia
-        ixx="0.108946982419341"
-        ixy="3.11912048400738E-05"
-        ixz="0.0285991269769911"
-        iyy="0.174209236580041"
-        iyz="-3.87570736828523E-05"
-        izz="0.169436598215615" />
+        ixx="0.190931542400052"
+        ixy="-0.000151932210553234"
+        ixz="0.000218714775398145"
+        iyy="0.22858847379228"
+        iyz="8.03726346965803E-05"
+        izz="0.336307450388486" />
     </inertial>
     <visual>
       <origin
@@ -23,6 +23,46 @@
       <geometry>
         <mesh
           filename="package://xiaoqiang_udrf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xiaoqiang_udrf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="2.427226206414E-07 -4.33570857309978E-07 -0.0314078188560065"
+        rpy="0 0 0" />
+      <mass
+        value="0.804868654069467" />
+      <inertia
+        ixx="0.00126505571363722"
+        ixy="-9.67257422399763E-11"
+        ixz="5.19504396075941E-09"
+        iyy="0.00126505539569708"
+        iyz="-9.27980942972676E-09"
+        izz="0.00228261521359981" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xiaoqiang_udrf/meshes/left_wheel.STL" />
       </geometry>
       <material
         name="">
@@ -36,131 +76,91 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://xiaoqiang_udrf/meshes/base_link.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <link
-    name="right_wheel">
-    <inertial>
-      <origin
-        xyz="2.34224847309172E-07 -4.18391444476085E-07 -0.0313585308024449"
-        rpy="0 0 0" />
-      <mass
-        value="0.834069618273221" />
-      <inertia
-        ixx="0.00135726839183469"
-        ixy="-9.67227768689481E-11"
-        ixz="5.20467286648132E-09"
-        iyy="0.00135726807389091"
-        iyz="-9.29700936296369E-09"
-        izz="0.00245953673287894" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://xiaoqiang_udrf/meshes/right_wheel.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.29412 0.29412 0.29412 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://xiaoqiang_udrf/meshes/right_wheel.STL" />
-      </geometry>
-    </collision>
-  </link>
-  <joint
-    name="right_wheel"
-    type="continuous">
-    <origin
-      xyz="0 -0.137 -0.035"
-      rpy="-1.5708 0.82165 5.3376E-17" />
-    <parent
-      link="base_link" />
-    <child
-      link="right_wheel" />
-    <axis
-      xyz="0 0 -1" />
-  </joint>
-  <link
-    name="left_wheel">
-    <inertial>
-      <origin
-        xyz="2.3422484732305E-07 -4.18391444469146E-07 -0.0313585308024448"
-        rpy="0 0 0" />
-      <mass
-        value="0.834069618273221" />
-      <inertia
-        ixx="0.00135726839183469"
-        ixy="-9.67227779531503E-11"
-        ixz="5.20467286638775E-09"
-        iyy="0.00135726807389091"
-        iyz="-9.29700936303383E-09"
-        izz="0.00245953673287894" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://xiaoqiang_udrf/meshes/left_wheel.STL" />
-      </geometry>
-      <material
-        name="">
-        <color
-          rgba="0.29412 0.29412 0.29412 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
           filename="package://xiaoqiang_udrf/meshes/left_wheel.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="left_whell"
+    name="rot1"
     type="continuous">
     <origin
-      xyz="0 0.137 -0.035"
-      rpy="-1.5708 0.68527 -3.1416" />
+      xyz="0 0.1595 -0.023"
+      rpy="1.5707963267949 1.5707963267949 0" />
     <parent
       link="base_link" />
     <child
       link="left_wheel" />
     <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="right_wheel">
+    <inertial>
+      <origin
+        xyz="2.427226206414E-07 -4.33570857289595E-07 -0.0314078188560067"
+        rpy="0 0 0" />
+      <mass
+        value="0.804868654069467" />
+      <inertia
+        ixx="0.00126505571363722"
+        ixy="-9.6725742243205E-11"
+        ixz="5.1950439605852E-09"
+        iyy="0.00126505539569708"
+        iyz="-9.27980943032279E-09"
+        izz="0.00228261521359981" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xiaoqiang_udrf/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xiaoqiang_udrf/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rot2"
+    type="continuous">
+    <origin
+      xyz="0 -0.1595 -0.023"
+      rpy="1.5707963267949 -1.49170041722774 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel" />
+    <axis
       xyz="0 0 1" />
   </joint>
   <link
-    name="front1_wheel">
+    name="front_wheel1">
     <inertial>
       <origin
-        xyz="-0.0219509394856257 -0.0497654925206955 -8.24697044266021E-08"
+        xyz="0.0293639688147509 -0.0541914734100133 -1.1837033078721E-07"
         rpy="0 0 0" />
       <mass
-        value="0.126682636045453" />
+        value="0.134574489008056" />
       <inertia
-        ixx="8.58301085170872E-05"
-        ixy="-1.75690856456565E-05"
-        ixz="1.4480574702378E-10"
-        iyy="5.641859934683E-05"
-        iyz="2.48635960500572E-10"
-        izz="0.000118263597691831" />
+        ixx="9.01050497257373E-05"
+        ixy="1.94978830377822E-05"
+        ixz="-2.9547824252388E-10"
+        iyy="6.63745101495483E-05"
+        iyz="-9.21568445436582E-12"
+        izz="0.00012988996922008" />
     </inertial>
     <visual>
       <origin
@@ -168,12 +168,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://xiaoqiang_udrf/meshes/front1_wheel.STL" />
+          filename="package://xiaoqiang_udrf/meshes/front_wheel1.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.29412 0.29412 0.29412 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -182,38 +182,38 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://xiaoqiang_udrf/meshes/front1_wheel.STL" />
+          filename="package://xiaoqiang_udrf/meshes/front_wheel1.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="left_rot"
+    name="rot3"
     type="continuous">
     <origin
-      xyz="0.26879 0.0795 -0.02225"
-      rpy="1.5708 0 -2.0971" />
+      xyz="0.175 0.135 -0.00500000000000002"
+      rpy="1.5707963267949 0 0" />
     <parent
       link="base_link" />
     <child
-      link="front1_wheel" />
+      link="front_wheel1" />
     <axis
       xyz="0 1 0" />
   </joint>
   <link
-    name="front2_wheel">
+    name="front_wheel2">
     <inertial>
       <origin
-        xyz="-0.0219509414641416 -0.0497654917386023 -8.28137300817877E-08"
+        xyz="0.0293639688147508 -0.0541914734100133 -1.18370330801087E-07"
         rpy="0 0 0" />
       <mass
-        value="0.126682635871512" />
+        value="0.134574489008056" />
       <inertia
-        ixx="8.58301209689117E-05"
-        ixy="-1.75690808934397E-05"
-        ixz="1.54126882717859E-10"
-        iyy="5.641859130817E-05"
-        iyz="2.4729050394631E-10"
-        izz="0.000118263588798326" />
+        ixx="9.01050497257373E-05"
+        ixy="1.94978830377824E-05"
+        ixz="-2.95478242486611E-10"
+        iyy="6.63745101495486E-05"
+        iyz="-9.21568442387264E-12"
+        izz="0.00012988996922008" />
     </inertial>
     <visual>
       <origin
@@ -221,12 +221,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://xiaoqiang_udrf/meshes/front2_wheel.STL" />
+          filename="package://xiaoqiang_udrf/meshes/front_wheel2.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.29412 0.29412 0.29412 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -235,38 +235,38 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://xiaoqiang_udrf/meshes/front2_wheel.STL" />
+          filename="package://xiaoqiang_udrf/meshes/front_wheel2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="right_rot"
+    name="rot4"
     type="continuous">
     <origin
-      xyz="0.26879 -0.0805 -0.02225"
-      rpy="1.5708 0 -0.38246" />
+      xyz="0.175 -0.135 -0.005"
+      rpy="1.5707963267949 0 0" />
     <parent
       link="base_link" />
     <child
-      link="front2_wheel" />
+      link="front_wheel2" />
     <axis
       xyz="0 1 0" />
   </joint>
   <link
-    name="lidar_link">
+    name="back_wheel1">
     <inertial>
       <origin
-        xyz="-0.000270404408758477 -0.00990182724453459 -9.15924011635205E-09"
+        xyz="0.029363968814751 -0.0541914734100133 -1.18370330842721E-07"
         rpy="0 0 0" />
       <mass
-        value="0.0984481791975763" />
+        value="0.134574489008056" />
       <inertia
-        ixx="4.23868512888815E-05"
-        ixy="5.06268377229566E-08"
-        ixz="2.60738292164857E-11"
-        iyy="7.73339430598604E-05"
-        iyz="-8.63309441438688E-12"
-        izz="4.14171995121138E-05" />
+        ixx="9.01050497257373E-05"
+        ixy="1.94978830377821E-05"
+        ixz="-2.95478242462894E-10"
+        iyy="6.63745101495479E-05"
+        iyz="-9.21568445267176E-12"
+        izz="0.00012988996922008" />
     </inertial>
     <visual>
       <origin
@@ -274,12 +274,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://xiaoqiang_udrf/meshes/lidar_link.STL" />
+          filename="package://xiaoqiang_udrf/meshes/back_wheel1.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.29412 0.29412 0.29412 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -288,38 +288,38 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://xiaoqiang_udrf/meshes/lidar_link.STL" />
+          filename="package://xiaoqiang_udrf/meshes/back_wheel1.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="lidar"
+    name="rot5"
     type="continuous">
     <origin
-      xyz="-0.015 0.00017732 0.335"
-      rpy="-1.5708 1.7959E-17 -1.2422" />
+      xyz="-0.175 0.135 -0.00500000000000002"
+      rpy="1.5707963267949 0 0" />
     <parent
       link="base_link" />
     <child
-      link="lidar_link" />
+      link="back_wheel1" />
     <axis
-      xyz="0 -1 0" />
+      xyz="0 1 0" />
   </joint>
   <link
-    name="kinect_Link">
+    name="back_wheel2">
     <inertial>
       <origin
-        xyz="-5.87573113058461E-05 5.53730394869945E-11 0.00406829312764971"
+        xyz="0.0293639688147508 -0.0541914734100133 -1.1837033078721E-07"
         rpy="0 0 0" />
       <mass
-        value="0.588695418123486" />
+        value="0.134574489008056" />
       <inertia
-        ixx="0.000252720769597177"
-        ixy="-8.4114087384226E-11"
-        ixz="9.66369894017477E-07"
-        iyy="0.00330215907806691"
-        iyz="-2.07230914828389E-12"
-        izz="0.0032059987634125" />
+        ixx="9.01050497257374E-05"
+        ixy="1.94978830377823E-05"
+        ixz="-2.95478242489999E-10"
+        iyy="6.63745101495485E-05"
+        iyz="-9.2156844382722E-12"
+        izz="0.00012988996922008" />
     </inertial>
     <visual>
       <origin
@@ -327,12 +327,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://xiaoqiang_udrf/meshes/kinect_link.STL" />
+          filename="package://xiaoqiang_udrf/meshes/back_wheel2.STL" />
       </geometry>
       <material
         name="">
         <color
-          rgba="0.29412 0.29412 0.29412 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -341,21 +341,74 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://xiaoqiang_udrf/meshes/kinect_link.STL" />
+          filename="package://xiaoqiang_udrf/meshes/back_wheel2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="kinect"
+    name="rot6"
     type="continuous">
     <origin
-      xyz="0.13823 0 0.255"
-      rpy="-1.4803 0 -1.5708" />
+      xyz="-0.175 -0.135 -0.005"
+      rpy="1.5707963267949 0 0" />
     <parent
       link="base_link" />
     <child
-      link="kinect_Link" />
+      link="back_wheel2" />
     <axis
-      xyz="1 0 0" />
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="base_Link2">
+    <inertial>
+      <origin
+        xyz="1.05647156421126E-05 0.130320789762157 0.0552981044971211"
+        rpy="0 0 0" />
+      <mass
+        value="0.112344913941376" />
+      <inertia
+        ixx="0.0034280223233624"
+        ixy="3.09367042160875E-06"
+        ixz="1.24973447421769E-07"
+        iyy="0.00392177920837671"
+        iyz="-0.000266431722395911"
+        izz="0.00719827584866891" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xiaoqiang_udrf/meshes/base_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://xiaoqiang_udrf/meshes/base_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rot7"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.08"
+      rpy="0 0 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="base_Link2" />
+    <axis
+      xyz="0 0 0" />
   </joint>
 </robot>
